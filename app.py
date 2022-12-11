@@ -1,7 +1,7 @@
 from flask import Flask
 
-from posts.views import posts_blueprint
 from api.api import api_blueprint
+from posts.views import posts_blueprint
 
 app = Flask(__name__)
 app.config["JSON_AS_ASCII"] = False
@@ -13,12 +13,12 @@ app.register_blueprint(api_blueprint)
 
 @app.errorhandler(404)
 def page_not_found(_):
-	return "Страница не найдена"
+    return "Страница не найдена"
 
 
 @app.errorhandler(500)
 def page_not_found(_):
-	return "На сервере что то пошло не так"
+    return "На сервере что то пошло не так"
 
 
 if __name__ == "__main__":
