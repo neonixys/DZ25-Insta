@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/home/adoronin/DZ25-Insta
-ExecStart=/home/env/bin/python -m flask run -h 0.0.0.0 -p 80
+ExecStart=/home/adoronin/DZ25-Insta/venv/bin/python -m flask run -h 0.0.0.0 -p 80
 Restart=always
 
 [Install]
