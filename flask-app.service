@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 WorkingDirectory=/home/adoronin/DZ25-Insta
-ExecStart=//home/adoronin/DZ25-Insta/venv/bin/python -m gunicorn app:app -h 0.0.0.0 -w 4
+ExecStart=//home/adoronin/DZ25-Insta/venv/bin/python -m gunicorn app:app -b 0.0.0.0 -w 4
 Restart=always
 
 [Install]
